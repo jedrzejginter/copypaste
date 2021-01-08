@@ -1,6 +1,8 @@
-import {forwardRef} from 'react';
+import {forwardRef, InputHTMLAttributes, Ref} from 'react';
 
-function Input(props, ref) {
+type Props = InputHTMLAttributes<HTMLInputElement>;
+
+function Input(props: Props, ref: Ref<HTMLInputElement>) {
   return <input {...props} ref={ref} />;
 }
 
