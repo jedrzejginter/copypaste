@@ -1,9 +1,17 @@
-import {forwardRef, InputHTMLAttributes, Ref} from 'react';
+import {forwardRef, ComponentPropsWithoutRef, Ref} from 'react';
 
-type Props = InputHTMLAttributes<HTMLInputElement>;
+type Props = ComponentPropsWithoutRef<'input'>;
 
 function Checkbox({checked, ...props}: Props, ref: Ref<HTMLInputElement>) {
-  return <input {...props} aria-checked={checked} checked={checked} type="checkbox" ref={ref} />;
+  return (
+    <input
+      {...props}
+      aria-checked={checked}
+      checked={checked}
+      type="checkbox"
+      ref={ref}
+    />
+  );
 }
 
 export default forwardRef(Checkbox);

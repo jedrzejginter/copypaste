@@ -1,6 +1,6 @@
-import {memo, forwardRef, SVGProps, Ref} from "react";
+import {memo, forwardRef, ComponentPropsWithoutRef, Ref} from "react";
 
-type Props = SVGProps<SVGSVGElement>;
+type Props = ComponentPropsWithoutRef<'svg'>;
 
 const nodes: any[] = Array(9);
 const rotateStep: number = 360 / nodes.length;
